@@ -1,0 +1,256 @@
+.uupp {
+    position: relative;
+}
+
+
+.layer {
+    position: absolute;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.726);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+}
+
+.item:hover .layer {
+    top: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.categItem:hover .layer {
+    top: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+/* ====== item end ====== */
+
+.img-contain {
+    cursor: pointer;
+}
+
+.img-contain:hover .img-layer {
+    top: 0;
+    transition: all .5s;
+
+}
+
+.img-layer {
+    position: absolute;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff75;
+}
+
+
+.modaal {
+    height: 200px;
+}
+
+.fa-spinner {
+    font-size: 100px;
+}
+
+.showItem {
+    min-height: 100vh;
+    display: none;
+
+
+}
+
+/* =================  start side bar ======================== */
+
+.sideNav {
+    background-color: black;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 99;
+
+}
+
+.sideNav .left {
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.172);
+    display: flex;
+    flex-direction: column;
+    /* justify-content:center; */
+    align-items: start;
+    position: relative;
+    padding-top: 20px;
+    color: white;
+}
+
+.sideNav .right {
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sidbarUnits li {
+    color: white;
+    padding: 5px 70px 5px 30px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.fa-xmark {
+    display: none;
+    padding: 12px;
+
+}
+
+.fa-bars {
+    padding: 12px;
+
+}
+
+
+.sideItem {
+    position: relative;
+    top: 200px;
+    opacity: 0;
+}
+
+/* =================  end side bar ======================== */
+
+
+
+.recepies li {
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(0, 255, 255, 0.402);
+    border-radius: 10px;
+}
+
+.tagsBox li {
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(255, 51, 0, 0.402);
+    border-radius: 10px;
+}
+
+
+.item h3 {
+    color: white;
+}
+
+.areaItem {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box;
+
+}
+
+.areaItem i {
+    font-size: 40px;
+}
+
+i {
+    cursor: pointer;
+}
+
+.ingItem {
+    height: 200px;
+    margin: 10px 0;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding-block: 25px;
+}
+
+.ingItem i {
+    font-size: 50px;
+}
+
+.categItem {
+    overflow: hidden;
+    height: 300px;
+    padding-block: 20px;
+}
+
+/* pages  */
+
+.searchPage {
+    background-color: black;
+    color: white;
+    display: none;
+}
+
+.input1::placeholder {
+    color: gray;
+}
+
+.input2::placeholder {
+    color: gray;
+}
+
+.input1,
+.input2 {
+    color: #fff;
+    width: 45%;
+}
+
+
+
+/* ===========   contact page   ========= */
+
+.contact {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+}
+
+.Rightside {
+    width: 40%;
+}
+
+.Leftside {
+    width: 40%;
+}
+
+
+
+/* ======    start media query        ======== */
+@media screen and (max-width : 768px) {
+    .Rightside {
+        width: 80%;
+
+    }
+
+    .Leftside {
+        width: 80%;
+    }
+
+    .input1,
+.input2 {
+width: 80%;
+margin-block: 10px !important;
+}
+
+.smallscreenDetails{
+    text-align: center;
+}
+}

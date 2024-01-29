@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-black">
+
+
+
+    <div class="sideAndDetails">
+
+        <div class="sideNav">
+            <div class="left">
+                <div>
+                    <ul class="list-unstyled sidbarUnits overflow-hidden">
+                        <li class="sideItem sideItem1" id="Search">Search</li>
+                        <li class="sideItem sideItem2" id="Categories">Categories</li>
+                        <li class="sideItem sideItem3" id="Area">Area</li>
+                        <li class="sideItem sideItem4" id="Ingredients">Ingredients</li>
+                        <li class="sideItem sideItem5" id="Contact">Contact Us</li>
+                    </ul>
+                </div>
+
+
+
+                <div class="p-4 position-absolute bottom-0 ">
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+
+                    <div>
+                        <p>Copyright Â© 2019 All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right ">
+                <div>
+                    <img src="assets/logo (1).png" alt="logo" class="w-100 logo position-absolute top-0 start-0">
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-bars fa-2xl "></i>
+                    <i class="fa-solid fa-xmark fa-2xl "></i>
+                </div>
+
+                <div class="position-absolute bottom-0 d-flex flex-column py-4 ">
+                    <i class="fa-solid fa-globe py-1"></i>
+                    <i class="fa-sharp fa-solid fa-share-nodes py-1"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="itemDetails showItem  w-100  bg-black text-white py-5 ">
+            <div class="container">
+                <div class="row myBox">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+
+    <div class="bigDiv">
+
+
+        <div id="home" class="home mainContent">
+            <div class="container">
+                <div class="myContent row g-4 bg-black py-5 text-center">
+
+
+                    <div class="vh-100 w-100 d-flex justify-content-center align-items-center ">
+                        <i class="fa-solid fa-spinner fa-spin" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="AreasPage container ">
+            <div class="Areas text-center row g-4 bg-black py-5 w-100 text-white ">
+
+                <div class="vh-100 w-100 d-flex justify-content-center align-items-center ">
+                    <i class="fa-solid fa-spinner fa-spin" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="ingrPage container ">
+            <div class="ingr text-center row bg-black w-100 text-white g-4 py-5 ">
+
+                <div class="vh-100 w-100 d-flex justify-content-center align-items-center ">
+                    <i class="fa-solid fa-spinner fa-spin" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="categoriesPage container">
+            <div class="categories text-center row bg-black text-white w-100  g-4 py-5">
+
+                <div class="vh-100 w-100 d-flex justify-content-center align-items-center ">
+                    <i class="fa-solid fa-spinner fa-spin" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="searchPage w-100  min-vh-100">
+            <div class="container">
+                <div class=" d-flex justify-content-center align-items-center flex-wrap">
+                    <input type="text" class="input1  form-control  mx-2 my-5 bg-black text-white "
+                        placeholder="search by name... ">
+                    <input type="text" class="input2  form-control  mx-2 my-5 bg-black text-white"
+                        placeholder="search by first letter... " maxlength="1">
+                </div>
+                <div class="searchContent row bg-black text-center g-4 py-2">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class=" contact ">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center w-100 flex-wrap">
+                    <div class=" Rightside d-flex justify-content-center align-items-center flex-column px-2">
+                        <input type="text" class="name form-control w-100 m-2 " placeholder="Enter your Name">
+                        <div class="nameAlert alert alert-danger text-center d-none w-100">Special characters and
+                            numbers not allowed</div>
+
+                        <input type="number" class="phone form-control w-100 m-2" placeholder="Enter your Phone">
+                        <div class=" phoneAlert alert alert-danger text-center d-none w-100">Enter valid Phone Number
+                        </div>
+
+                        <input type="password" class="pass1 form-control w-100 m-2" placeholder="Enter your Password">
+                        <div class=" passAlert alert alert-danger text-center d-none w-100">Enter valid password (6 - 16
+                            characters letter or number)
+                        </div>
+                    </div>
+
+                    <div class=" Leftside d-flex justify-content-center align-items-center flex-column  px-2">
+                        <input type="email" class="mail form-control w-100 m-2 " placeholder="Enter your Email">
+                        <div class=" emailAlert alert alert-danger text-center d-none w-100">Email not valid
+                            *exemple@yyy.zzz</div>
+
+                        <input type="number" class="age form-control w-100 m-2" placeholder="Enter your Age">
+                        <div class=" ageAlert alert alert-danger text-center d-none w-100">Enter valid age</div>
+
+                        <input type="password" class="pass2 form-control w-100 m-2" placeholder="Repassword">
+                        <div class=" pass2Alert alert alert-danger text-center d-none w-100">Enter valid repassword :
+                            must be same first pass</div>
+
+                    </div>
+                </div>
+                <div class="w-100 p-3 text-center">
+                    <button class="contactBtn btn btn-outline-danger disabled"> submit </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fake"></div>
+
+    </div>
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+
+</html>
