@@ -19,8 +19,10 @@ export class Sections {
                 cartoona += `
                 
                 <div id="${response.meals[i].strArea}" class="col-md-3 col-sm-4 areaItem ">
-                <i class="fa-solid fa-earth-americas"></i>
-                <h3>${response.meals[i].strArea}</h3>
+                    <div class="innerArea">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <h3>${response.meals[i].strArea}</h3>
+                    </div>
                 </div>
                 `
             }
@@ -31,18 +33,18 @@ export class Sections {
             for (let i = 0; i < 20; i++) {
                 cartoona += `
                 
-                <div id="${response.meals[i].strIngredient}" class="col-md-3 col-sm-4 ingItem overflow-hidden ">
-                <i class="fa-solid fa-drumstick-bite"></i>
-                <h3>${response.meals[i].strIngredient}</h3>
-                <p>${response.meals[i].strDescription}</p>
+                <div id="${response.meals[i].strIngredient}" class="col-md-3 col-sm-4  overflow-hidden ">
+                    <div class=" ingItem ">
+                        <img src="https://www.themealdb.com/images/ingredients/${response.meals[i].strIngredient}.png"  alt="s" class=" ingImg rounded-3">
+                        <h3>${response.meals[i].strIngredient}</h3>
+                        <p>${response.meals[i].strDescription.split(" ",17).join(" ")} . . .</p>
+                    </div>
                 </div>
                 `
             }
             document.querySelector('.ingr').innerHTML = cartoona
 
         }
-
-
 
 
         $('.areaItem').click(function () { new home(this.id, 'a', 'filter', 'Areas') })
@@ -61,10 +63,10 @@ export class Sections {
         for (let i = 0; i < response.categories.length; i++) {
             cartoona += `       
             <div id="${response.categories[i].strCategory}" class=" col-md-3 col-sm-4 categItem  ">
-            <div class=" position-relative overflow-hidden rounded-3">
-                <img src="${response.categories[i].strCategoryThumb}"  alt="s" class="w-100 rounded-3">
+            <div class=" innercateg position-relative overflow-hidden rounded-3">
+                <img src="${response.categories[i].strCategoryThumb}"  alt="" class="w-100 rounded-3">
         
-                <div class="layer flex-column overflow-hidden">
+                <div class="layer flex-column overflow-hidden  ">
                     <h3>${response.categories[i].strCategory}</h3>
                     <p>${response.categories[i].strCategoryDescription.split(" ",20).join(" ")}</p>
                 </div>

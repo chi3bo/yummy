@@ -10,38 +10,40 @@ export class details {
     async display() {
         let apiD = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${this.myId}`)
         let response = await apiD.json();
-        let m = response.meals[0]
-        console.log(m.strIngredient20);
+
+console.log(response.meals[0]);
+        
+        let mi = response.meals[0]
         document.querySelector('.myBox').innerHTML = `
         <div class="img py-3 col-md-4 smallscreenDetails">
         <img src="${response.meals[0].strMealThumb}" alt="" class=" rounded-3  w-100">
-        <h2 class= "p-3 w-100">${response.meals[0].strMeal}</h2>
+        <h1 class= "p-3 w-100">${response.meals[0].strMeal}</h1>
     </div>
 
-    <div class="content col-8">
+    <div class="content col-md-8">
         <h2>Instructions</h2>
-        <p>${response.meals[0].strInstructions}</p>
+        <p class="itemInstruction" >${response.meals[0].strInstructions}</p>
         <h2>Area : ${response.meals[0].strArea}</h2>
-        <h2>Category : ${response.meals[0].strCategory}</h2>
+        <h2 class="pb-3">Category : ${response.meals[0].strCategory}</h2>
         <h2>Recipes :</h2>
 
         <ul class="recepies list-unstyled d-flex flex-wrap">
-            ${m.strIngredient1 != '' ? `<li>${m.strIngredient1}</li>` : ''} 
-            ${m.strIngredient2 != '' ? `<li>${m.strIngredient2}</li>` : ''} 
-            ${m.strIngredient3 != '' ? `<li>${m.strIngredient3}</li>` : ''} 
-            ${m.strIngredient4 != '' ? `<li>${m.strIngredient4}</li>` : ''} 
-            ${m.strIngredient5 != '' ? `<li>${m.strIngredient5}</li>` : ''} 
-            ${m.strIngredient6 != '' ? `<li>${m.strIngredient6}</li>` : ''} 
-            ${m.strIngredient7 != '' ? `<li>${m.strIngredient7}</li>` : ''} 
-            ${m.strIngredient8 != '' ? `<li>${m.strIngredient8}</li>` : ''} 
-            ${m.strIngredient9 != '' ? `<li>${m.strIngredient9}</li>` : ''} 
-            ${m.strIngredient10 != '' ? `<li>${m.strIngredient10}</li>` : ''} 
-            ${m.strIngredient11 != '' ? `<li>${m.strIngredient11}</li>` : ''} 
-            ${m.strIngredient12 != '' ? `<li>${m.strIngredient12}</li>` : ''} 
-            ${m.strIngredient13 != '' ? `<li>${m.strIngredient13}</li>` : ''} 
-            ${m.strIngredient14 != '' ? `<li>${m.strIngredient14}</li>` : ''} 
-            ${m.strIngredient15 != '' ? `<li>${m.strIngredient15}</li>` : ''} 
-            ${m.strIngredient16 != '' ? `<li>${m.strIngredient16}</li>` : ''} 
+            ${mi.strIngredient1 != '' ? `<li>${mi.strMeasure1} ${mi.strIngredient1}</li>` : ''} 
+            ${mi.strIngredient2 != '' ? `<li>${mi.strMeasure2} ${mi.strIngredient2}</li>` : ''} 
+            ${mi.strIngredient3 != '' ? `<li>${mi.strMeasure3} ${mi.strIngredient3}</li>` : ''} 
+            ${mi.strIngredient4 != '' ? `<li>${mi.strMeasure4} ${mi.strIngredient4}</li>` : ''} 
+            ${mi.strIngredient5 != '' ? `<li>${mi.strMeasure5} ${mi.strIngredient5}</li>` : ''} 
+            ${mi.strIngredient6 != '' ? `<li>${mi.strMeasure6} ${mi.strIngredient6}</li>` : ''} 
+            ${mi.strIngredient7 != '' ? `<li>${mi.strMeasure7} ${mi.strIngredient7}</li>` : ''} 
+            ${mi.strIngredient8 != '' ? `<li>${mi.strMeasure8} ${mi.strIngredient8}</li>` : ''} 
+            ${mi.strIngredient9 != '' ? `<li>${mi.strMeasure9} ${mi.strIngredient9}</li>` : ''} 
+            ${mi.strIngredient10 != '' ? `<li>${mi.strMeasure10} ${mi.strIngredient10}</li>` : ''} 
+            ${mi.strIngredient11 != '' ? `<li>${mi.strMeasure11} ${mi.strIngredient11}</li>` : ''} 
+            ${mi.strIngredient12 != '' ? `<li>${mi.strMeasure12} ${mi.strIngredient12}</li>` : ''} 
+            ${mi.strIngredient13 != '' ? `<li>${mi.strMeasure13} ${mi.strIngredient13}</li>` : ''} 
+            ${mi.strIngredient14 != '' ? `<li>${mi.strMeasure14} ${mi.strIngredient14}</li>` : ''} 
+            ${mi.strIngredient15 != '' ? `<li>${mi.strMeasure15} ${mi.strIngredient15}</li>` : ''} 
+            ${mi.strIngredient16 != '' ? `<li>${mi.strMeasure16} ${mi.strIngredient16}</li>` : ''} 
         </ul>
 
         <h2>Tags :</h2>

@@ -1,7 +1,26 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75) 0% 100%), url(../assets/any-media/14.jpeg);
+    background-size: cover;
+    background-position: 50% 20%;
+    background-attachment: fixed;
+    font-family: 'Itim', cursive;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Lilita One', sans-serif;
+}
+
+
 .uupp {
     position: relative;
 }
 
+.loadingPage {
+    z-index: 100;
+}
 
 .layer {
     position: absolute;
@@ -63,14 +82,14 @@
 .showItem {
     min-height: 100vh;
     display: none;
-
-
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85) 0% 100%), url(../assets/any-media/11.jpg);
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* =================  start side bar ======================== */
 
 .sideNav {
-    background-color: black;
     width: 300px;
     height: 100vh;
     position: fixed;
@@ -84,10 +103,9 @@
 .sideNav .left {
     width: 80%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.172);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
-    /* justify-content:center; */
     align-items: start;
     position: relative;
     padding-top: 20px;
@@ -105,6 +123,10 @@
     position: relative;
 }
 
+.sideFooter {
+    padding: 26px
+}
+
 .sidbarUnits li {
     color: white;
     padding: 5px 70px 5px 30px;
@@ -112,10 +134,21 @@
     cursor: pointer;
 }
 
+.sidbarUnits li:hover {
+    filter: drop-shadow(0 0 7px rgb(255, 255, 255));
+    color: #FDD00D;
+}
+
 .fa-xmark {
     display: none;
     padding: 12px;
 
+
+}
+
+.fa-xmark:hover,
+.fa-bars:hover {
+    color: #000;
 }
 
 .fa-bars {
@@ -153,11 +186,17 @@
     color: white;
 }
 
-.areaItem {
+.innerArea {
     cursor: pointer;
     border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    transition: all .5s;
+}
+
+.innerArea:hover {
+    background-color: #ffffff28;
 
 }
 
@@ -170,27 +209,43 @@ i {
 }
 
 .ingItem {
-    height: 200px;
-    margin: 10px 0;
-    border: 5px solid black;
+    height: 300px;
+    margin: 0;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
-    padding-block: 25px;
+    padding: 10px 25px;
+    background-color: #ffffff00;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.ingItem:hover {
+    background-color: #ffffff28;
+
 }
 
 .ingItem i {
     font-size: 50px;
 }
 
+.ingImg {
+    width: 40%;
+}
+
 .categItem {
     overflow: hidden;
-    height: 300px;
-    padding-block: 20px;
+}
+
+.innercateg {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
 }
 
 /* pages  */
 
 .searchPage {
-    background-color: black;
     color: white;
     display: none;
 }
@@ -245,12 +300,90 @@ i {
     }
 
     .input1,
-.input2 {
-width: 80%;
-margin-block: 10px !important;
+    .input2 {
+        width: 80%;
+        margin-block: 10px !important;
+    }
+
+    .smallscreenDetails {
+        text-align: center;
+    }
 }
 
-.smallscreenDetails{
-    text-align: center;
+
+
+@media screen and (max-width : 576px) {
+
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.78) 0% 100%), url(../assets/any-media/3-m.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        width: 85%;
+    }
+
+
+    .sideNav {
+        width: 200px;
+    }
+
+
+    .sideNav .right {
+        border-radius: 0 15px 15px 0;
+        height: 30%;
+        top: 35%;
+    }
+
+
+    .recepies li {
+        padding: 7px;
+        margin: 4px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .tagsBox li {
+        padding: 7px;
+        margin: 4px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .itemInstruction {
+        font-size: 16px;
+    }
+
+    .ingItem {
+        font-size: 14px;
+        height: 250px;
+    }
+
+    .showItem {
+
+        background-position: 48% 70%;
+        background-attachment: fixed;
+    }
+
 }
+
+@media screen and (max-height : 700px) {
+    .sideNav .right {
+        border-radius: 0 0 0 0;
+        height: 100%;
+        top: 0;
+    }
+}
+
+@media screen and (max-height : 412px) {
+    .sideFooter {
+        padding: 0 10px 0px;
+        font-size: 10px;
+    }
+
+    .sidbarUnits li {
+        padding: 3px 70px 3px 30px;
+        margin: 4px 0;
+    }
 }
